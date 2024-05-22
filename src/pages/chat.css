@@ -1,0 +1,71 @@
+
+.msg-container::-webkit-scrollbar{
+    display: none;
+}
+
+
+.message .content{
+    padding: 12px;
+    width: max-content;
+    
+    max-width: 70vw;
+    min-width: 70px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.message .name{
+    margin-bottom: 5px;
+}
+
+.received .content{
+    background-color: #323232;
+}
+
+.sender .content{
+    background-color: #00A3FF;
+    margin-left: 0;
+}
+
+.sender{
+    width: max-content;
+    margin-left: auto;
+    margin-right: 20px;
+
+}
+
+.received{
+    margin-left: 20px;
+}
+
+.time{
+    color: #A0A0A0;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.edit{
+    justify-content:end ;
+    gap: 10px;
+}
+
+.edit button{
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+
+.edit button i{
+    color: rgba(255,255,255,0.5);
+    font-size: 15px;
+}
+
+.updatewindow{
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
