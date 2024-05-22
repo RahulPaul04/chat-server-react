@@ -51,7 +51,7 @@ function Chat() {
     }
     
     fetchmsg("?firsttime")
-    setInterval(fetchmsg,2000)
+    setInterval(fetchmsg,4000)
 
     console.log(name);
    },[])
