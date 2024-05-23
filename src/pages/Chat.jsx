@@ -33,7 +33,7 @@ function Chat() {
 
     const fetchmsg = async(query="")=>{
         
-            let response = await fetch(`${SERVER_URL}/messages`)
+            let response = await fetch(`${SERVER_URL}/messages${query}`)
             let  msgs = await response.json()
             // console.log(response);
             let curr_msg = [...messages]
@@ -43,6 +43,7 @@ function Chat() {
             setmessages(curr_msg)
             // scrolltobottom()
             console.log("fetching messages");
+            fetchmsg()
             
     }
 
@@ -52,7 +53,7 @@ function Chat() {
     }
     
     fetchmsg("?firsttime")
-    setInterval(fetchmsg,4000)
+    // setInterval(fetchmsg,4000)
 
     console.log(name);
    },[])
@@ -98,6 +99,7 @@ function Chat() {
     n_msg['time'] = time
 
     try{
+        console.log("sending message");
         const result = await addMessageAPI(n_msg)
         // console.log(result);
         if(result.status>=200 && result.status){
