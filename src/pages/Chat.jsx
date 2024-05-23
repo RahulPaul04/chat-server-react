@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import './chat.css'
 import { addMessageAPI,deletemessageAPI,updatemessageAPI } from '../Services/allAPI'
+import SERVER_URL from '../Services/server_url'
 
 function Chat() {
 
@@ -32,7 +33,7 @@ function Chat() {
 
     const fetchmsg = async(query="")=>{
         
-            let response = await fetch(`http://localhost:3000/messages`)
+            let response = await fetch(`${SERVER_URL}/messages`)
             let  msgs = await response.json()
             // console.log(response);
             let curr_msg = [...messages]
